@@ -1,0 +1,46 @@
+@include media-lg {
+  body {
+    width: 100%;
+    max-width: 1440px;
+    @include displayFlex(row, center, center);
+  }
+
+  .content {
+    width: 1110px;
+    height: 446px;
+    padding: 4.5rem;
+    display: grid;
+    grid-template-columns: 40%;
+    grid-template-rows: 30% 30% 40%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+
+    &__image {
+      &-mobile {
+        display: none;
+      }
+      &-desktop {
+        height: 100%;
+        display: initial;
+        position: absolute;
+        top: 0;
+        right: 0;
+        & > img {
+          height: 100%;
+          max-height: 100%;
+          border-radius: 0px 8px 8px 0px;
+        }
+      }
+    }
+    &__title {
+      padding: 0;
+    }
+    &__desc {
+      padding: 0;
+    }
+    &__info {
+      @include displayFlex(row, space-between, center);
+    }
+  }
+}

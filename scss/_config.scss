@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+//create a mixin for most used css attributes and use it with @include displayFlex(args) i.E
+@mixin displayFlex($fdirection, $jcontent, $aitems) {
+  display: flex;
+  flex-direction: $fdirection;
+  justify-content: $jcontent;
+  align-items: $aitems;
+}
+@mixin centerContainer {
+  margin: 0 auto;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+button {
+  cursor: pointer;
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
